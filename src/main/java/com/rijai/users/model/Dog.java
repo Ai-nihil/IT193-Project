@@ -11,7 +11,6 @@ public class Dog {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
     private String dogName;
     private String dogBreed;
     private String dogAge;
@@ -21,7 +20,8 @@ public class Dog {
     public Dog() {
     }
 
-    public Dog(String dogName, String dogBreed, String dogAge, String dogWeight, String dogStatus) {
+    public Dog(int id, String dogName, String dogBreed, String dogAge, String dogWeight, String dogStatus) {
+        this.id = id;
         this.dogName = dogName;
         this.dogBreed = dogBreed;
         this.dogAge = dogAge;
