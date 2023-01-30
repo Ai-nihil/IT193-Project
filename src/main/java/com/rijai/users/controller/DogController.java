@@ -13,25 +13,25 @@ public class DogController {
     @Autowired
     private DogService dogService;
 
-    @RequestMapping("/")
+    @RequestMapping("/all-dogs")
     public List<Dog> getAllDogs()
     {
         return dogService.getAllDogs();
     }
 
-    @RequestMapping(value="/dogs/{id}")
+    @RequestMapping(value = "/dogs/{id}")
     public Dog getDog(@PathVariable int id)
     {
         return dogService.getDog(id);
     }
 
-    @RequestMapping(value="/add-dog", method= RequestMethod.POST)
+    @RequestMapping(value = "/add-dog", method= RequestMethod.POST)
     public Dog addDog(@RequestBody Dog dog)
     {
         return dogService.addDog(dog);
     }
 
-    @RequestMapping(value="/update-Dog", method=RequestMethod.PUT)
+    @RequestMapping(value = "/update-dog", method=RequestMethod.PUT)
     public Dog updateDog(@RequestBody Dog dog)
     {
         return dogService.updateDog(dog);
