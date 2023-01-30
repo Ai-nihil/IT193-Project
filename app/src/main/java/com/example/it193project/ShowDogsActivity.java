@@ -27,7 +27,7 @@ public class ShowDogsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_dogs);
 
-        recyclerView = findViewById(R.id.recycler_userList);
+        recyclerView = findViewById(R.id.recycler_dogsList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loadDogs();
