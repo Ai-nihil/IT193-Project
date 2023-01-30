@@ -9,6 +9,7 @@ public class Dog {
     private String dogBreed;
     private String dogAge;
     private String dogWeight;
+    private String dogStatus;
 
     public Dog() {
     }
@@ -16,8 +17,9 @@ public class Dog {
     public Dog(String dogName, String dogBreed, String dogAge, String dogWeight) {
         this.dogName = dogName;
         this.dogBreed = dogBreed;
-        this.dogName = dogAge;
-        this.dogBreed = dogWeight;
+        this.dogAge = dogAge;
+        this.dogWeight = dogWeight;
+        this.dogStatus = getDogStatus();
     }
 
     public int getId() {
@@ -60,6 +62,14 @@ public class Dog {
         this.dogWeight = dogWeight;
     }
 
+    public String getDogStatus() {
+        return dogStatus;
+    }
+
+    public void setDogStatus(String dogStatus) {
+        this.dogStatus= dogStatus;
+    }
+
     @Override
     public int hashCode() {
         int hash = 7;
@@ -68,6 +78,7 @@ public class Dog {
         hash = 79 * hash + + Objects.hashCode(this.dogBreed);
         hash = 79 * hash + Objects.hashCode(this.dogAge);
         hash = 79 * hash + + Objects.hashCode(this.dogWeight);
+        hash = 79 * hash + + Objects.hashCode(this.dogStatus);
         return hash;
     }
 
@@ -78,7 +89,8 @@ public class Dog {
         sb.append(", dogName='").append(dogName).append('\'');
         sb.append(", dogBreed=").append(dogBreed).append('\'');
         sb.append(", dogAge='").append(dogName).append('\'');
-        sb.append(", dogWeight=").append(dogWeight);
+        sb.append(", dogWeight=").append(dogWeight).append('\'');
+        sb.append(", dogStatus=").append(dogStatus).append('\'');
         sb.append('}');
         return sb.toString();
     }

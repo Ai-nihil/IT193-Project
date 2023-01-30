@@ -17,7 +17,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".DogsList"
+            android:name=".AddDogsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ShowDogsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
