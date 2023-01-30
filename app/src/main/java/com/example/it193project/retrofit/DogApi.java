@@ -13,8 +13,8 @@ import retrofit2.http.PUT;
 
 public interface DogApi {
 
-    @GET("/")
-    Call<List<Dog>> getAllDogs();
+    @GET("/all-dogs")
+    Call <List<Dog>> getAllDogs() ;
 
     @POST("/add-dog")
     Call <Dog> save(@Body Dog dog);
@@ -22,7 +22,7 @@ public interface DogApi {
     @PUT("/update-dog")
     Call <Dog> update(@Body Dog dog);
 
-    @DELETE("/delete-dog")
+    @DELETE("/dogs/{id}")
     Call <Dog> delete(@Body Dog dog);
 
 }
