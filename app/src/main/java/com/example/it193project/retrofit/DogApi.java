@@ -10,6 +10,7 @@ import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Path;
 
 public interface DogApi {
 
@@ -22,7 +23,10 @@ public interface DogApi {
     @PUT("/update-dog")
     Call <Dog> update(@Body Dog dog);
 
+    //@DELETE("/dogs/{id}")
+    //Call <Dog> delete(int id);
+
     @DELETE("/dogs/{id}")
-    Call <Dog> delete(@Body Dog dog);
+    Call <Dog> delete(@Path("id") int id);
 
 }

@@ -31,7 +31,7 @@ public class AddDogsActivity extends AppCompatActivity {
     private void initializeComponents(){
         EditText input_dogName = findViewById(R.id.form_textFieldDogName);
         EditText input_dogBreed = findViewById(R.id.form_textFieldDogBreed);
-        EditText input_dogAge = findViewById(R.id.form_textFieldDogBreed);
+        EditText input_dogAge = findViewById(R.id.form_textFieldDogAge);
         EditText input_dogWeight = findViewById(R.id.form_textFieldDogWeight);
         EditText input_dogStatus = findViewById(R.id.form_textFieldDogStatus);
         Button btn_Add = findViewById(R.id.form_buttonAdd);

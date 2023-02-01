@@ -4,7 +4,6 @@ import java.util.Objects;
 
 public class Dog {
     private int id;
-
     private String dogName;
     private String dogBreed;
     private String dogAge;

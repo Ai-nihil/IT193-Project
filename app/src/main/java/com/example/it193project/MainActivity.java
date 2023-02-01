@@ -17,6 +17,10 @@ public class MainActivity extends AppCompatActivity {
         Button btn_Add = findViewById(R.id.buttonAdd);
         Button btn_Show=findViewById(R.id.buttonShow);
 
+        //delete button
+        Button btn_Delete = findViewById(R.id.buttonDelete);
+
+
         btn_Add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +34,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ShowDogsActivity.class));
             }
         });
+
+        btn_Delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DeleteDogsActivity.class));
+            }
+        });
+
+
+
+
 
 
     }
