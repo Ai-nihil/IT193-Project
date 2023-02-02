@@ -19,7 +19,7 @@ public class DogController {
         return dogService.getAllDogs();
     }
 
-    @RequestMapping("/find-dog")
+    @RequestMapping("/api/show-dog/{id}")
     public Dog getDog(@PathVariable int id) { return dogService.getDog(id);}
 
     @RequestMapping(value = "/api/add-dog", method= RequestMethod.POST)
@@ -28,7 +28,7 @@ public class DogController {
         return dogService.addDog(dog);
     }
 
-    @RequestMapping(value = "/api/update-dog", method=RequestMethod.PUT)
+    @RequestMapping(value = "/api/update-dog/{id}", method=RequestMethod.PUT)
     public Dog updateDog(@PathVariable int id, @RequestBody Dog dog)
     {
         return dogService.updateDog(id, dog);
