@@ -1,6 +1,7 @@
 package com.example.it193project.adapter;
 
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -10,6 +11,7 @@ import com.example.it193project.R;
 
 public class DogHolder extends RecyclerView.ViewHolder {
     TextView dogName, dogBreed, dogAge, dogWeight, dogStatus;
+    Button dogAdoptButton;
 
     public DogHolder(@NonNull View itemView) {
         super(itemView);
@@ -20,6 +22,7 @@ public class DogHolder extends RecyclerView.ViewHolder {
         dogAge = itemView.findViewById(R.id.list_dogAge);
         dogWeight = itemView.findViewById(R.id.list_dogWeight);
         dogStatus = itemView.findViewById(R.id.list_dogStatus);
+        dogAdoptButton = itemView.findViewById(R.id.adoptButton);
     }
 }
 
