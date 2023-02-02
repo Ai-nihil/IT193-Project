@@ -25,6 +25,7 @@ public class ShowDogsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_show_dogs);
 
         recyclerView = findViewById(R.id.recycler_dogsList);

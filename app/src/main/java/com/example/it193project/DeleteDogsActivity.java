@@ -24,6 +24,7 @@ public class DeleteDogsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_delete_dogs);
 
         initializeComponents();

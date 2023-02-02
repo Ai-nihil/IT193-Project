@@ -28,6 +28,7 @@ public class ShowDogsUsers extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_show_dogs_users);
 
         Button button = findViewById(R.id.button);
