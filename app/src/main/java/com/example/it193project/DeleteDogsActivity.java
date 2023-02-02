@@ -39,21 +39,17 @@ public class DeleteDogsActivity extends AppCompatActivity {
         DogApi dogApi = retrofitService.getRetrofit().create(DogApi.class);
 
         btnDelete.setOnClickListener(view ->{
-            int id = Integer.parseInt(String.valueOf(editText_ID));
-
-            Dog dog = new Dog();
-            dog.setId(id);
-
-                    dogApi.delete(dog.getId())
+            int id = Integer.parseInt(editText_ID.getText().toString());
+                    dogApi.deleteDog(id)
                             .enqueue(new Callback<Dog>() {
                                     @Override
                                     public void onResponse(Call<Dog> call, Response<Dog> response) {
-                                        Toast.makeText(DeleteDogsActivity.this,"Delete Successful!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(DeleteDogsActivity.this,"Delete Failed", Toast.LENGTH_SHORT).show();
                                     }
 
                                     @Override
                                     public void onFailure(Call<Dog> call, Throwable t) {
-                                         Toast.makeText(DeleteDogsActivity.this,"Failed to delete", Toast.LENGTH_SHORT).show();
+                                         Toast.makeText(DeleteDogsActivity.this,"Delete Succesful!", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                 });
