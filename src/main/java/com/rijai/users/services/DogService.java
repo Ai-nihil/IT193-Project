@@ -23,8 +23,13 @@ public class DogService {
     public Dog addDog(Dog dog) {
         return dogRepository.save(dog);
     }
-    public Dog updateDog(Dog dog) {
-        return dogRepository.save(dog);
+
+    public Dog updateDog(int id, Dog _dog) {
+        Optional<Dog> dog = dogRepository.findById(id);
+        if(dog.isEmpty())
+            return null;
+        _dog.setId(id);
+        return dogRepository.save(_dog);
     }
     public Dog getDog(int id)
     {

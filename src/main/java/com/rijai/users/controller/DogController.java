@@ -13,31 +13,28 @@ public class DogController {
     @Autowired
     private DogService dogService;
 
-    @RequestMapping("/all-dogs")
+    @RequestMapping("/api/all-dogs")
     public List<Dog> getAllDogs()
     {
         return dogService.getAllDogs();
     }
 
-    @RequestMapping(value = "/dogs/{id}")
-    public Dog getDog(@PathVariable int id)
-    {
-        return dogService.getDog(id);
-    }
+    @RequestMapping("/find-dog")
+    public Dog getDog(@PathVariable int id) { return dogService.getDog(id);}
 
-    @RequestMapping(value = "/add-dog", method= RequestMethod.POST)
+    @RequestMapping(value = "/api/add-dog", method= RequestMethod.POST)
     public Dog addDog(@RequestBody Dog dog)
     {
         return dogService.addDog(dog);
     }
 
-    @RequestMapping(value = "/update-dog", method=RequestMethod.PUT)
-    public Dog updateDog(@RequestBody Dog dog)
+    @RequestMapping(value = "/api/update-dog", method=RequestMethod.PUT)
+    public Dog updateDog(@PathVariable int id, @RequestBody Dog dog)
     {
-        return dogService.updateDog(dog);
+        return dogService.updateDog(id, dog);
     }
 
-    @RequestMapping(value="/dogs/{id}", method=RequestMethod.DELETE)
+    @RequestMapping(value="/api/dogs/{id}", method=RequestMethod.DELETE)
     public void deleteDog(@PathVariable int id)
     {
         dogService.deleteDog(id);
