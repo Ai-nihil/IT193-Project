@@ -33,7 +33,7 @@ public class ShowDogsUsers extends AppCompatActivity {
 
         Button button = findViewById(R.id.button);
 
-        recyclerView = findViewById(R.id.recycler_dogsList);
+        recyclerView = findViewById(R.id.recycler_dogsUsers);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         loadDogs();

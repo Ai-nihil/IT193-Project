@@ -22,7 +22,6 @@ public class DogHolder extends RecyclerView.ViewHolder {
         dogAge = itemView.findViewById(R.id.list_dogAge);
         dogWeight = itemView.findViewById(R.id.list_dogWeight);
         dogStatus = itemView.findViewById(R.id.list_dogStatus);
-        dogAdoptButton = itemView.findViewById(R.id.adoptButton);
     }
 }
 
